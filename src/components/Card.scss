@@ -1,0 +1,109 @@
+:root {
+  --color-primary: hsl(0, 36%, 70%);
+}
+
+.logo-title {
+  height: 86px;
+
+  display: flex;
+  align-items: center;
+  padding: 26px;
+}
+
+.block__image {
+  height: fit-content;
+  img {
+    width: 100%;
+  }
+
+  picture {
+    display: block;
+    width: 100%;
+
+    source {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.message {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+  font-size: 14px;
+  width: 100%;
+
+  h3 {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: normal;
+
+    span {
+      color: var(--color-primary);
+    }
+  }
+
+  p {
+    color: var(--color-primary);
+    line-height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .invalid-feedback {
+    width: 100%;
+    text-align: left;
+    padding-left: 2rem;
+    color: #eea9ab;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .card {
+    width: 144rem;
+    height: 80rem;
+
+    background: url('../images/bg-pattern-desktop.svg');
+
+    display: grid;
+    grid-template-columns: 83rem 61rem;
+    grid-template-rows: 10rem 60rem;
+    grid-template-areas: "logo photo" 
+                          "message photo";
+
+    .message {
+      grid-area: message;
+      padding: 15rem 15rem 15rem 15rem;
+      gap: 2rem;
+      display: grid;
+      grid-template-rows: auto auto 5rem 4rem;
+
+      h3 {
+        text-align: left;
+        width: 100%;
+        font-size: 6rem;
+      }
+
+      p {
+        text-align: left;
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+
+      small {
+        justify-self: flex-start;
+        align-self: flex-start;
+      }
+    }
+    
+    .block__image {
+      grid-area: photo;
+      height: 100%;
+    }
+  }
+}

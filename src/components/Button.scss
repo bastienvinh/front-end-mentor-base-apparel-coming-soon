@@ -1,0 +1,14 @@
+.btn {
+  height: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 30px;
+  border: 0;
+  background: linear-gradient(#fab6b6, #f39395);
+
+  &:active, &:hover, &:focus-visible {
+    background-color: #fab6b6;
+    transform: scaleX(1.1);
+    border-radius: 20px;
+  }
+}
