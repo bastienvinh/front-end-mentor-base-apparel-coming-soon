@@ -76,6 +76,11 @@
     grid-template-areas: "logo photo" 
                           "message photo";
 
+    .logo-title {
+      padding-left: 14rem;
+      padding-top: 7rem;
+    }
+
     .message {
       grid-area: message;
       padding: 15rem 15rem 15rem 15rem;
